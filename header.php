@@ -51,26 +51,54 @@
         <header class="container-fluid p-0" role="banner" itemscope itemtype="http://schema.org/WPHeader">
             <div class="row no-gutters">
                 <div class="the-header col-12">
-                    <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
-                        <a class="navbar-brand" href="<?php echo home_url('/');?>" title="<?php echo get_bloginfo('name'); ?>">Navbar</a>
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <?php
-                        wp_nav_menu( array(
-                            'theme_location'    => 'header_menu',
-                            'depth'             => 1, // 1 = with dropdowns, 0 = no dropdowns.
-                            'container'         => 'div',
-                            'container_class'   => 'collapse navbar-collapse',
-                            'container_id'      => 'bs-example-navbar-collapse-1',
-                            'menu_class'        => 'navbar-nav mr-auto',
-                            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-                            'walker'            => new WP_Bootstrap_Navwalker()
-                        ) );
-                        ?>
+                    <div class="container-fluid">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="header-logo col-4">
+                                <a class="navbar-brand" href="<?php echo home_url('/');?>" title="<?php echo get_bloginfo('name'); ?>">
+                                    <?php ?> <?php $custom_logo_id = get_theme_mod( 'custom_logo' ); ?>
+                                    <?php $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
+                                    <?php if (!empty($image)) { ?>
+                                    <img src="<?php echo $image[0];?>" alt="<?php echo get_bloginfo('name'); ?>" class="img-fluid img-logo" />
+                                    <?php } ?>
+                                </a>
+                                <a href="" class="btn btn-md btn-header"><?php _e('Ingresar', 'europaplus'); ?></a>
+                                <a href="" class="btn btn-md btn-header"><?php _e('Subscribe', 'europaplus'); ?></a>
+                            </div>
+                            <div class="header-navbar col-4">
+                                <nav class="navbar navbar-expand-md" role="navigation">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <?php
+                                    wp_nav_menu( array(
+                                        'theme_location'    => 'header_menu',
+                                        'depth'             => 1, // 1 = with dropdowns, 0 = no dropdowns.
+                                        'container'         => 'div',
+                                        'container_class'   => 'collapse navbar-collapse',
+                                        'container_id'      => 'bs-example-navbar-collapse-1',
+                                        'menu_class'        => 'navbar-nav ml-auto mr-auto',
+                                        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                                        'walker'            => new WP_Bootstrap_Navwalker()
+                                    ) );
+                                    ?>
 
-                    </nav>
+                                </nav>
+                            </div>
+                            <div class="header-social col-4">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fa fa-instagram"></i></a>
+                                <a href=""><i class="fa fa-youtube"></i></a>
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+
+                                <select name="" id="">
+                                    <option value="">flags</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </header>

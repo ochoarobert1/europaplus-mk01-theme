@@ -128,9 +128,21 @@ function europaplus_load_js() {
 
         }
 
+        wp_register_script('liquidmetal-js', get_template_directory_uri() . '/js/liquidmetal.js', array('jquery'), $version_remove, true);
+        wp_enqueue_script('liquidmetal-js');
+
+        /*- AUTOCOMPLETE -*/
+        wp_register_script('flexselect-js', get_template_directory_uri() . '/js/jquery.flexselect.js', array('jquery', 'liquidmetal-js'), $version_remove, true);
+        wp_enqueue_script('flexselect-js');
+
         /*- MAIN FUNCTIONS -*/
         wp_register_script('main-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), $version_remove, true);
         wp_enqueue_script('main-functions');
+
+        wp_localize_script( 'main-functions', 'admin_url', array(
+            'ajax_url' => admin_url('admin-ajax.php'),
+
+        ));
 
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );

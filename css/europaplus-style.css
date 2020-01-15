@@ -14,6 +14,7 @@ body {
   height: 100%;
 }
 body {
+  background: #0a0014;
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
 }
@@ -28,4 +29,124 @@ a:hover {
 }
 .page-container {
   min-height: 85vh;
+}
+/* --------------------------------------------------------------
+1.- HEADER
+-------------------------------------------------------------- */
+.the-header {
+  color: #ffffff;
+  background: #0f213a;
+  background: -moz-linear-gradient(90deg, #0f213a 0%, #080425 50%, #1e0b14 100%);
+  background: -webkit-linear-gradient(90deg, #0f213a 0%, #080425 50%, #1e0b14 100%);
+  background: linear-gradient(90deg, #0f213a 0%, #080425 50%, #1e0b14 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f213a", endColorstr="#1e0b14", GradientType=1);
+  padding: 0.5rem 1rem !important;
+}
+.header-logo .img-logo {
+  max-width: 180px;
+}
+.header-logo .btn-header {
+  color: #ffffff;
+  border: 3px solid transparent;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 0.5rem 1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.header-logo .btn-header:hover {
+  color: #ffffff;
+  border-color: #ff00d7;
+}
+.header-navbar a {
+  color: #ffffff;
+  padding: .5rem 1.5rem !important;
+  margin: 0 .2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.header-navbar a:hover {
+  color: #ff00d7;
+}
+.header-social {
+  text-align: right;
+}
+.header-social a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 0 .5rem;
+}
+.header-social a:hover {
+  color: #ff00d7;
+}
+.header-social select {
+  color: #ffffff;
+  margin-left: 10px;
+  border: 0;
+  background: none;
+}
+/* --------------------------------------------------------------
+2.- HELP ARTICLES
+-------------------------------------------------------------- */
+.main-help-articles-container {
+  padding-top: 8rem;
+  color: #ffffff;
+}
+.main-help-articles-container h1 {
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+}
+.main-help-articles-search-container {
+  margin-bottom: 1rem;
+}
+.main-help-articles-search-container label {
+  font-size: 1.5rem;
+}
+.main-help-articles-search-container input {
+  background: none transparent;
+  border: 2px solid #ffffff;
+}
+.main-help-articles-search-container input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.main-help-articles-search-container input:-moz-placeholder {
+  color: #ffffff;
+}
+.main-help-articles-search-container input::-moz-placeholder {
+  color: #ffffff;
+}
+.main-help-articles-search-container input:-ms-input-placeholder {
+  color: #ffffff;
+}
+.main-help-articles-search-container .btn-outline-secondary {
+  color: #ffffff;
+  background: #ff00d7;
+  border: 1px solid #ffffff;
+  border-right: 2px solid #ffffff;
+}
+.main-help-content ul {
+  list-style: none;
+  padding: 0;
+}
+.main-help-content ul li a {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 0.2rem 0;
+  display: block;
+}
+.main-help-content ul li a:hover {
+  color: #ff00d7;
+}
+.single-main-help-container {
+  padding-top: 8rem;
+  color: #ffffff;
+}
+.single-main-help-container h1 {
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
 }

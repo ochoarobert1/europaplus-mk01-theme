@@ -127,15 +127,15 @@ function europaplus_widgets_init() {
         'after_title'   => '</h2>',
     ) );
 
-    //    register_sidebar( array(
-    //        'name' => __( 'Shop Sidebar', 'europaplus' ),
-    //        'id' => 'shop_sidebar',
-    //        'description' => __( 'Estos widgets seran vistos en Tienda y Categorias de Producto', 'europaplus' ),
-    //        'before_widget' => '<li id='%1$s' class='widget %2$s'>',
-    //        'after_widget'  => '</li>',
-    //        'before_title'  => '<h2 class='widgettitle'>',
-    //        'after_title'   => '</h2>',
-    //    ) );
+    register_sidebars( 3, array(
+        'name'          => __('Footer Section %d', 'flowerclub'),
+        'id'            => 'sidebar_footer',
+        'description'   => __('Footer Section', 'flowerclub'),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>'
+    ) );
 }
 
 /* --------------------------------------------------------------
@@ -190,3 +190,23 @@ if ( function_exists('add_image_size') ) {
     add_image_size('blog_img', 276, 217, true);
     add_image_size('single_img', 636, 297, true );
 }
+
+
+function europaplus_json_help_articles_handler () {
+    $links_array = new WP_Query(array('post_type' => 'help-articles', 'posts_per_page' => -1, 'order' => 'DESC', 'orderby' => 'date'));
+    if ($links_array->have_posts()) :
+
+    while ($links_array->have_posts()) : $links_array->the_post();
+    $array_posts[] = array('id' => get_the_ID(), 'title' => get_the_title());
+    endwhile;
+
+    endif;
+    wp_reset_query();
+
+    $array_response = json_encode($array_posts);
+    echo $array_response;
+    wp_die();
+}
+
+add_action('wp_ajax_europaplus_json_help_articles', 'europaplus_json_help_articles_handler');
+add_action('wp_ajax_nopriv_europaplus_json_help_articles', 'europaplus_json_help_articles_handler');

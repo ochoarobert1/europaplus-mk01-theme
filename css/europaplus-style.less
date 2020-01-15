@@ -16,13 +16,19 @@ Variables
 @white: #ffffff;
 @blue: #2B7BCB;
 @orange: #FFB12A;
+@pink: #FF00D7;
+@darkpurple: #0A0014;
 
 /* --------------------------------------------------------------
 Body default
 -------------------------------------------------------------- */
-html, body { height: 100%; }
+html,
+body {
+    height: 100%;
+}
 
 body {
+    background: @darkpurple;
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
 }
@@ -30,10 +36,145 @@ body {
 a {
     .transition(all .2s ease-in-out);
 
-    &:hover { text-decoration: none; }
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 
 .page-container {
     min-height: 85vh;
+}
+
+/* --------------------------------------------------------------
+1.- HEADER
+-------------------------------------------------------------- */
+.the-header {
+    color: @white;
+    background: rgb(15, 33, 58);
+    background: -moz-linear-gradient(90deg, rgba(15, 33, 58, 1) 0%, rgba(8, 4, 37, 1) 50%, rgba(30, 11, 20, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(15, 33, 58, 1) 0%, rgba(8, 4, 37, 1) 50%, rgba(30, 11, 20, 1) 100%);
+    background: linear-gradient(90deg, rgba(15, 33, 58, 1) 0%, rgba(8, 4, 37, 1) 50%, rgba(30, 11, 20, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f213a", endColorstr="#1e0b14", GradientType=1);
+    padding: 0.5rem 1rem !important;
+}
+
+.header-logo {
+    & .img-logo {
+        max-width: 180px;
+    }
+
+    & .btn-header {
+        color: @white;
+        border: 3px solid transparent;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding: 0.5rem 1rem;
+        .transition(all .3s ease-in-out);
+
+        &:hover {
+            color: @white;
+            border-color: @pink;
+        }
+    }
+}
+
+.header-navbar {
+    & a {
+        color: @white;
+        padding: .5rem 1.5rem !important;
+        margin: 0 .2rem;
+        .transition(all .3s ease-in-out);
+
+        &:hover {
+            color: @pink;
+        }
+    }
+}
+
+.header-social {
+    text-align: right;
+
+    & a {
+        color: @white;
+        font-size: 1.1rem;
+        margin: 0 .5rem;
+
+        &:hover {
+            color: @pink;
+        }
+    }
+
+    & select {
+        color: @white;
+        margin-left: 10px;
+        border: 0;
+        background: none;
+    }
+}
+
+/* --------------------------------------------------------------
+2.- HELP ARTICLES
+-------------------------------------------------------------- */
+.main-help-articles-container {
+    padding-top: 8rem;
+    color: @white;
+
+    & h1 {
+        font-size: 2.3rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.main-help-articles-search-container {
+    margin-bottom: 1rem;
+
+    & label {
+        font-size: 1.5rem;
+    }
+
+    & input {
+        background: none transparent;
+        border: 2px solid @white;
+        .placeholder(@white);
+    }
+
+    & .btn-outline-secondary {
+        color: @white;
+        background: @pink;
+        border: 1px solid @white;
+        border-right: 2px solid @white;
+    }
+}
+
+.main-help-content {
+    & ul {
+        list-style: none;
+        padding: 0;
+
+        & li {
+            & a {
+                color: @white;
+                font-weight: 500;
+                font-size: 1.3rem;
+                padding: 0.2rem 0;
+                display: block;
+
+                &:hover {
+                    color: @pink;
+                }
+            }
+        }
+    }
+}
+
+
+.single-main-help-container {
+    padding-top: 8rem;
+    color: @white;
+
+    & h1 {
+        font-size: 2.3rem;
+        margin-bottom: 1.5rem;
+    }
 }

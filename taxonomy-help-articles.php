@@ -1,4 +1,18 @@
-<?php get_header(); ?> 
-help
+<?php get_header(); ?>
+<main class="container">
+    <div class="row">
+        <div class="main-help-articles-container col-12">
+            <h1><?php _e('Help & Assistance', 'europaplus'); ?></h1>
+            <div class="container">
+                <div class="row">
 
-<?php get_footer(); ?> 
+                    <div class="main-help-content col-6">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<?php get_footer(); ?>

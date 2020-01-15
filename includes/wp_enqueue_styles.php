@@ -68,6 +68,10 @@ function europaplus_load_css() {
         wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans', false, $version_remove, 'all');
         wp_enqueue_style('google-fonts');
 
+         /*- AUTOCOMPLETE -*/
+        wp_register_style('flexselect-style', get_template_directory_uri() . '/css/flexselect.css', false, $version_remove, 'all');
+        wp_enqueue_style('flexselect-style');
+
         /*- MAIN STYLE -*/
         wp_register_style('main-style', get_template_directory_uri() . '/css/europaplus-style.css', false, $version_remove, 'all');
         wp_enqueue_style('main-style');

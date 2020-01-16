@@ -65,7 +65,7 @@ function europaplus_load_css() {
         }
 
         /*- GOOGLE FONTS -*/
-        wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans', false, $version_remove, 'all');
+        wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:100:300,400,600:700:900', false, $version_remove, 'all');
         wp_enqueue_style('google-fonts');
 
          /*- AUTOCOMPLETE -*/

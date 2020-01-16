@@ -15,8 +15,6 @@
             <?php wp_reset_query(); ?>
         </select>
         <input type="hidden" name="post_type" value="help-articles" />
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
-        </div>
+
     </div>
 </form>

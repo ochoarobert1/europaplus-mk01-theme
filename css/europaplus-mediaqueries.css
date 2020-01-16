@@ -2,9 +2,43 @@
 /* --------------------------------------------------------------
 MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
 -------------------------------------------------------------- */
+@media (max-width: 1440px) {
+  .header-logo .btn-header {
+    padding: 0.5rem 0.5rem;
+  }
+  .header-navbar a {
+    padding: .5rem 1rem !important;
+  }
+}
+@media (max-width: 1280px) {
+  .header-logo .btn-header {
+    display: none;
+  }
+}
 /* --------------------------------------------------------------
 MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
 -------------------------------------------------------------- */
 /* --------------------------------------------------------------
 MEDIAQUERIES XS - LAYOUTS LESS THAN 768px
 -------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .main-post-thumbnail .main-post-thumbnail-overlay h1 {
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+  }
+  .main-post-thumbnail .main-post-thumbnail-overlay {
+    padding: 1.5rem;
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+  }
+  .the-single {
+    padding: 1.5rem;
+  }
+  .post-content {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  .go-down {
+    display: none;
+  }
+}

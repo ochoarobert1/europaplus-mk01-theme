@@ -1,23 +1,20 @@
 <?php get_header(); ?>
 <main class="container" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
     <div class="row">
-        <div class="page-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="page-container blog-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="container p-0">
                 <div class="row">
-                    <div class="title-container col-12">
-                        <h1><?php _e('Blog', 'europaplus'); ?></h1>
-                    </div>
                     <?php if (have_posts()) : ?>
-                    <section class="col-9">
+                    <section class="blog-posts-container col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                         <?php $defaultatts = array('class' => 'img-fluid', 'itemprop' => 'image'); ?>
                         <?php while (have_posts()) : the_post(); ?>
                         <article id="post-<?php the_ID(); ?>" class="archive-item col-12 <?php echo join(' ', get_post_class()); ?>" role="article">
                             <div class="container p-0">
                                 <div class="row">
-                                    <picture class="col-5">
+                                    <picture class="archive-item-picture col-12">
                                         <?php if ( has_post_thumbnail()) : ?>
                                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                            <?php the_post_thumbnail('blog_img', $defaultatts); ?>
+                                            <?php the_post_thumbnail('full', $defaultatts); ?>
                                         </a>
                                         <?php else : ?>
                                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
@@ -25,16 +22,24 @@
                                         </a>
                                         <?php endif; ?>
                                     </picture>
-                                    <div class="col-7">
+                                    <div class="archive-item-info col-12">
                                         <header>
                                             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                                 <h2 rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h2>
                                             </a>
-                                            <time class="date" datetime="<?php echo get_the_time('Y-m-d') ?>" itemprop="datePublished"><?php the_time('d-m-Y'); ?></time>
-                                            <span class="author" itemprop="author" itemscope itemptype="http://schema.org/Person"><?php _e('Publicado por:', 'europaplus'); ?> <?php the_author_posts_link(); ?></span>
+                                            <time class="date" datetime="<?php echo get_the_time('Y-m-d') ?>" itemprop="datePublished"><i class="fa fa-clock-o"></i> <?php the_time('d-m-Y'); ?></time>
+                                            <div class="category-container">
+                                                <?php $array_categories = get_the_category(); ?>
+                                                <i class="fa fa-envelope-o"></i> <?php foreach ($array_categories as $item_cat) { ?>
+                                                <a href="<?php echo get_category_link($item_cat); ?>"><?php echo $item_cat->name; ?></a>
+                                                <?php } ?>
+                                            </div>
                                         </header>
-                                        <p><?php the_excerpt(); ?></p>
-                                        <a href="<?php the_permalink(); ?>" title="<?php _e('Leer Más', 'europaplus'); ?>" class="btn btn-md btn-dark"><?php _e('Leer Más', 'europaplus'); ?></a>
+                                        <div class="archive-item-excerpt">
+                                            <p><?php the_excerpt(); ?></p>
+                                        </div>
+                                        <hr>
+                                        <span class="author" itemprop="author" itemscope itemptype="http://schema.org/Person"><?php echo get_avatar( get_the_author_meta( 'ID' ), 24 ); ?> <?php the_author_posts_link(); ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -44,7 +49,7 @@
                             <?php if(function_exists('wp_paginate')) { wp_paginate(); } else { posts_nav_link(); wp_link_pages(); } ?>
                         </div>
                     </section>
-                    <aside class="col-3 hidden-xs">
+                    <aside class="sidebar-blog col-4 d-xl-flex d-lg-flex d-md-none d-sm-none d-none">
                         <?php get_sidebar(); ?>
                     </aside>
                     <?php else: ?>

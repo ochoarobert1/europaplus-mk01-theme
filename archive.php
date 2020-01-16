@@ -1,12 +1,10 @@
 <?php get_header(); ?>
 <main class="container" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
     <div class="row">
-        <div class="page-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="page-container blog-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="container p-0">
                 <div class="row">
-                    <div class="title-container col-12">
-                        <h1><?php single_cat_title(); ?></h1>
-                    </div>
+
                     <?php if (have_posts()) : ?>
                     <section class="col-9">
                         <?php $defaultatts = array('class' => 'img-fluid', 'itemprop' => 'image'); ?>

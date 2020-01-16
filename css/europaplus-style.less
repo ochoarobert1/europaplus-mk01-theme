@@ -114,7 +114,47 @@ a {
 }
 
 /* --------------------------------------------------------------
-2.- HELP ARTICLES
+2.- FOOTER
+-------------------------------------------------------------- */
+.the-footer {
+    padding: 0 1.5rem;
+    padding-top: 3rem;
+}
+
+.footer-item {
+    & ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    & .nav-link {
+        color: @white;
+        font-size: .9rem;
+        padding: .2rem 0;
+        padding-left: 0;
+    }
+}
+
+.footer-copy {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    color: white;
+
+    & img {
+        max-width: 200px;
+        margin-bottom: .5rem;
+    }
+
+    & h5 {
+        font-size: .9rem;
+        font-weight: 400;
+    }
+}
+
+/* --------------------------------------------------------------
+3.- HELP ARTICLES
 -------------------------------------------------------------- */
 .main-help-articles-container {
     padding-top: 8rem;
@@ -148,6 +188,8 @@ a {
 }
 
 .main-help-content {
+    margin-bottom: 1.5rem;
+
     & ul {
         list-style: none;
         padding: 0;
@@ -176,5 +218,219 @@ a {
     & h1 {
         font-size: 2.3rem;
         margin-bottom: 1.5rem;
+    }
+}
+
+
+/* single */
+.single-main-helper {
+    padding: 1rem 0;
+
+    & h2 {
+        font-size: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.single-main-help-menu {
+    border-right: 1px solid #272727;
+    padding: 1rem 0;
+}
+
+.main-help-menu-content {
+    & h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    & ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1.5rem;
+
+        & li {
+            & a {
+                display: block;
+                padding: .2rem 0;
+                color: @white;
+
+                &:hover {
+                    color: @pink;
+                }
+            }
+
+            & .active {
+                color: @pink;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.single-main-help-content {
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 2.3rem;
+}
+
+/* --------------------------------------------------------------
+4.- BLOG
+-------------------------------------------------------------- */
+.blog-container {
+    margin-top: 8rem;
+    background: @white;
+
+    & .archive-item {
+        margin-bottom: 1rem;
+
+        & .archive-item-picture {
+            & img {
+                width: 100%;
+            }
+        }
+
+        & .archive-item-info {
+            padding: 1rem 2.5rem;
+            font-size: 0.8rem;
+
+            & .category-container {
+                display: inline-block;
+                padding-left: 5px;
+
+                & a {
+                    color: @black;
+                    font-weight: 600;
+                }
+            }
+
+            & h2 {
+                font-size: 1.8rem;
+                font-weight: 900;
+                margin: 0.5rem 0;
+                margin-bottom: 1.5rem;
+                color: @black;
+            }
+        }
+
+        & .archive-item-excerpt {
+            font-size: 1rem;
+        }
+
+        & .author {
+            & img {
+                border-radius: 100%;
+                margin-right: 5px;
+            }
+
+            & a {
+                color: @black;
+            }
+        }
+    }
+}
+
+.pagination {
+    .display(flex);
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-posts-container {
+    padding: 2rem;
+    padding-left: 1rem;
+}
+
+.sidebar-blog {
+    padding: 2rem;
+    background: #F7F7F7;
+}
+
+#sidebar {
+    list-style: none;
+    padding: 0;
+
+    & .widgettitle {
+        font-size: 1rem;
+        margin: 1rem 0;
+        border-bottom: 1px solid gainsboro;
+        padding-bottom: 1rem;
+    }
+
+    & a {
+        color: @black;
+    }
+}
+
+/* SINGLE */
+
+.the-single {
+    background: @white;
+    padding: 2rem;
+}
+
+.the-sidebar {
+    padding: 2rem;
+    background: #F7F7F7;
+}
+
+.main-post-thumbnail {
+    position: relative;
+    padding: 0;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+
+    & .main-post-thumbnail-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: @white;
+        padding: 2rem;
+        padding-bottom: 1rem;
+        background: rgba(0, 0, 0, 0.30);
+        .display(flex);
+        align-items: flex-start;
+        flex-flow: column;
+        justify-content: flex-end;
+
+        & a {
+            color: @white;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        & h1 {
+            font-size: 2.3rem;
+            line-height: 3rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+    text-align: justify;
+
+    & a {
+        color: @pink;
+    }
+}
+
+.go-down {
+    padding-top: 1rem;
+    width: 100%;
+    text-align: center;
+
+    & a {
+        color: @white;
     }
 }

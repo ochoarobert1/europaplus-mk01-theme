@@ -95,7 +95,8 @@
                             <a href=""><i class="fa fa-youtube"></i></a>
                             <a href=""><i class="fa fa-linkedin"></i></a>
                             <select name="" id="">
-                                <option value="">flags</option>
+                                <option value=""><img src="<?php echo get_template_directory_uri(); ?>/images/flag-es.png" alt=""></option>
+                                <option value=""><img src="<?php echo get_template_directory_uri(); ?>/images/flag-en.png" alt=""></option>
                             </select>
                         </div>
                     </div>

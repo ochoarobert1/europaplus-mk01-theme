@@ -1,3 +1,5 @@
+// compress: false, strictMath: true, javascriptEnabled: true
+
 /* --------------------------------------------------------------
 /* MAIN LESS MIXINS AND FUNCTIONS - LESSHAT
 -------------------------------------------------------------- */
@@ -94,6 +96,7 @@ a {
 
 .header-social {
     text-align: right;
+    justify-content: flex-end;
 
     & a {
         color: @white;
@@ -422,6 +425,10 @@ a {
 
     & a {
         color: @pink;
+    }
+
+    & img {
+        max-width: 100%;
     }
 }
 

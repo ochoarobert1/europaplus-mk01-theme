@@ -68,7 +68,7 @@
                             <a href="" class="btn btn-md btn-header"><?php _e('Ingresar', 'europaplus'); ?></a>
                             <a href="" class="btn btn-md btn-header"><?php _e('Subscribe', 'europaplus'); ?></a>
                         </div>
-                        <div class="header-navbar col-xl-4 col-lg-6 col-md-9 col-sm-6 col-6">
+                        <div class="header-navbar col-xl-6 col-lg-6 col-md-9 col-sm-6 col-6">
                             <nav class="navbar navbar-expand-md" role="navigation">
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
@@ -80,7 +80,7 @@
                                         'container'         => 'div',
                                         'container_class'   => 'collapse navbar-collapse',
                                         'container_id'      => 'bs-example-navbar-collapse-1',
-                                        'menu_class'        => 'navbar-nav ml-auto mr-auto',
+                                        'menu_class'        => 'navbar-nav ml-auto',
                                         'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                                         'walker'            => new WP_Bootstrap_Navwalker()
                                     ) );
@@ -88,12 +88,7 @@
 
                             </nav>
                         </div>
-                        <div class="header-social  col-xl-4 col-lg-3 d-xl-flex d-lg-flex d-md-none d-sm-none d-none">
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-instagram"></i></a>
-                            <a href=""><i class="fa fa-youtube"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        <div class="header-social  col-xl-2 col-lg-3 d-xl-flex d-lg-flex d-md-none d-sm-none d-none">
                             <select name="" id="">
                                 <option value=""><img src="<?php echo get_template_directory_uri(); ?>/images/flag-es.png" alt=""></option>
                                 <option value=""><img src="<?php echo get_template_directory_uri(); ?>/images/flag-en.png" alt=""></option>

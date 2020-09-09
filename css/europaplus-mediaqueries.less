@@ -3,9 +3,25 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
 -------------------------------------------------------------- */
 @media (max-width: 1920px) {}
 
-@media (max-width: 1680px) {}
+@media (max-width: 1680px) {
+    .header-social a {
+        padding: 0 0.7rem;
+    }
+}
 
-@media (max-width: 1600px) {}
+@media (max-width: 1600px) {
+    .header-logo {
+        align-items: center;
+    }
+
+    .header-logo .btn-header {
+        font-size: 0.9rem;
+    }
+
+    .header-navbar a {
+        font-size: .9rem;
+    }
+}
 
 @media (max-width: 1440px) {
     .header-logo .btn-header {
@@ -15,17 +31,37 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
     .header-navbar a {
         padding: .5rem 1rem !important;
     }
+
+    .main-help-menu-content ul li a {
+        padding-right: 1rem;
+    }
+
+
 }
 
-@media (max-width: 1366px) {}
+@media (max-width: 1366px) {
+    .header-navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
 
 @media (max-width: 1280px) {
     .header-logo .btn-header {
         display: none;
     }
+
+    .header-navbar a {
+        padding: 0.5rem 0.6rem !important;
+    }
 }
 
-@media (max-width: 1170px) {}
+@media (max-width: 1170px) {
+    .main-help-menu-content ul li a {
+        padding: 0.2rem 0;
+        font-size: 0.9rem;
+    }
+}
 
 @media (max-width: 1024px) {}
 
@@ -34,7 +70,11 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
 /* --------------------------------------------------------------
 MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
 -------------------------------------------------------------- */
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+    .single-main-help-container {
+        padding-top: 1rem;
+    }
+}
 
 @media (max-width: 800px) {}
 
@@ -66,6 +106,14 @@ MEDIAQUERIES XS - LAYOUTS LESS THAN 768px
 
     .go-down {
         display: none;
+    }
+
+    .single-main-help-menu {
+        max-height: 200px;
+        overflow: auto;
+        overflow-x: hidden;
+        padding: 0;
+        margin-bottom: 2rem;
     }
 }
 

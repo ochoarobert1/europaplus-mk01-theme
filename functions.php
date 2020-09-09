@@ -136,6 +136,8 @@ function europaplus_widgets_init() {
         'before_title'  => '<h2 class="widgettitle">',
         'after_title'   => '</h2>'
     ) );
+
+    register_widget( 'europaplus_custom_mailchimp_form' );
 }
 
 /* --------------------------------------------------------------
@@ -191,6 +193,9 @@ if ( function_exists('add_image_size') ) {
     add_image_size('single_img', 636, 297, true );
 }
 
+/* --------------------------------------------------------------
+    AJAX FOR HELP ARTICLES
+-------------------------------------------------------------- */
 
 function europaplus_json_help_articles_handler () {
     $links_array = new WP_Query(array('post_type' => 'help-articles', 'posts_per_page' => -1, 'order' => 'DESC', 'orderby' => 'date'));
@@ -211,9 +216,68 @@ function europaplus_json_help_articles_handler () {
 add_action('wp_ajax_europaplus_json_help_articles', 'europaplus_json_help_articles_handler');
 add_action('wp_ajax_nopriv_europaplus_json_help_articles', 'europaplus_json_help_articles_handler');
 
-add_action('wp_head', 'custom_admin_remove_bar');
+
+/* --------------------------------------------------------------
+    REMOVE ADMIN BAR ON USERS
+-------------------------------------------------------------- */
+
 function custom_admin_remove_bar() {
-    if( current_user_can('administrator') ) {  
+    $user = wp_get_current_user();
+    $allowed_roles = array('editor', 'author');
+    if( array_intersect($allowed_roles, $user->roles ) ) {
         add_filter('show_admin_bar', '__return_false');
     }
 }
+
+add_action('wp_head', 'custom_admin_remove_bar');
+
+/* --------------------------------------------------------------
+    CUSTOM LINK WRAPPER FOR MULTISITE
+-------------------------------------------------------------- */
+function custom_multisite_link($lang, $link) {
+    $new_link = '';
+
+    if ( is_front_page() && is_home() ) {
+        if ($lang == 'es_ES') {
+            $new_link = $link . '/esp';
+        } else {
+            $new_link = $link . '';
+        }
+    } elseif ( is_front_page()){
+        if ($lang == 'es_ES') {
+            $new_link = $link . '/esp';
+        } else {
+            $new_link = $link . '';
+        }
+
+
+    } elseif ( is_home()){
+        if ($lang == 'es_ES') {
+            $new_link = $link . '/esp';
+        } else {
+            $new_link = $link . '';
+        }
+    } else {
+        if (is_post_type_archive('help-articles')) {
+            if ($lang == 'es_ES') {
+                $new_link = network_home_url('/esp/help-articles');
+            } else {
+                $new_link = network_home_url('/') . 'help-articles';
+            }
+        }
+
+        if (is_single()) {
+            if ($lang == get_locale()) {
+                $new_link = get_permalink();
+            } else {
+                $new_link = get_post_meta(get_queried_object_id(), 'eplus_lang_link', true);
+            }
+        }
+    }
+    echo $new_link;
+}
+
+function custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

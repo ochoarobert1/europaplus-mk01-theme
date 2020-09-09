@@ -1,8 +1,8 @@
-<form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url( '/' ); ?>">
-    <div>
-        <label for="s" class="screen-reader-text"><?php _e('Buscar por Términos:','europaplus'); ?></label>
-        <input type="search" id="s" name="s" value="" />
-
-        <button type="submit" id="searchsubmit" ><?php _e('Buscar','europaplus'); ?></button>
-    </div>
+<form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url( '/' ); ?>">
+    <div class="input-group">
+        <input type="search" id="s" name="s" class="form-control" placeholder="<?php _e('Buscar por Términos:','europaplus'); ?>" aria-label="<?php _e('Buscar por Términos:','europaplus'); ?>" aria-describedby="button-addon2">
+        <div class="input-group-append">
+            <button type="submit" id="searchsubmit" class="btn btn-outline-secondary"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
 </form>

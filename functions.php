@@ -266,6 +266,34 @@ function custom_multisite_link($lang, $link) {
             }
         }
 
+        if (is_archive()) {
+            if (strpos($link, 'https://blog.europamas.com/esp/') !== false) {
+                $link_archive = explode('https://blog.europamas.com/esp/', $link);
+            } else {
+                $link_archive = explode('https://blog.europamas.com/', $link);
+            }
+
+            if ($lang == 'es_ES') {
+                $new_link = network_home_url('/esp/') . $link_archive[1];
+            } else {
+                $new_link = network_home_url('/') . $link_archive[1];
+            }
+        }
+
+        if (is_category()) {
+            if (strpos($link, 'https://blog.europamas.com/esp/category/') !== false) {
+                $link_archive = explode('https://blog.europamas.com/esp/category/', $link);
+            } else {
+                $link_archive = explode('https://blog.europamas.com/category/', $link);
+            }
+
+            if ($lang == 'es_ES') {
+                $new_link = network_home_url('/esp/category/') . $link_archive[1];
+            } else {
+                $new_link = network_home_url('/category/') . $link_archive[1];
+            }
+        }
+
         if (is_single()) {
             if ($lang == get_locale()) {
                 $new_link = get_permalink();

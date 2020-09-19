@@ -397,12 +397,16 @@ a:hover {
   padding: 1rem 2.5rem;
   font-size: 0.7rem;
 }
+.blog-container .archive-item .archive-item-info .date {
+  color: #FF00D2;
+}
 .blog-container .archive-item .archive-item-info .category-container {
+  color: #FF00D2;
   display: inline-block;
   padding-left: 5px;
 }
 .blog-container .archive-item .archive-item-info .category-container a {
-  color: #46505A;
+  color: #FF00D2;
   font-weight: 600;
 }
 .blog-container .archive-item .archive-item-info h2 {
@@ -451,7 +455,7 @@ a:hover {
   font-size: 1.3rem;
   font-weight: 600;
   margin: 1rem 0;
-  border-bottom: 2px solid #190032;
+  border-bottom: 2px solid #FF00D2;
   padding-bottom: 1rem;
 }
 #sidebar a {
@@ -512,7 +516,7 @@ a:hover {
 }
 #sidebar .custom_mailchimp_form h3 {
   text-align: center;
-  color: #46505A;
+  color: #FF00D2;
   font-weight: 600;
   font-size: 1rem;
 }
@@ -584,23 +588,23 @@ a:hover {
 .main-post-thumbnail .main-post-thumbnail-overlay h1 {
   font-size: 2.3rem;
   line-height: 3rem;
-  font-weight: 600;
+  font-weight: 900;
 }
 .main-post-title {
   padding: 0.5rem 1rem;
 }
 .main-post-title a {
-  color: #46505A;
-  font-weight: 600;
+  color: #FF00D2;
   margin-right: 5px;
 }
 .main-post-title h1 {
   color: #190032;
   font-size: 2.3rem;
   line-height: 3rem;
-  font-weight: 700;
+  font-weight: 900;
 }
 .main-post-title .main-post-meta {
+  color: #FF00D2;
   font-size: 0.9rem;
 }
 .post-content {
@@ -608,6 +612,7 @@ a:hover {
   font-size: 1.1rem;
   line-height: 1.9rem;
   text-align: justify;
+  color: #46505A;
 }
 .post-content a {
   color: #FF00D7;
@@ -736,6 +741,15 @@ a:hover {
 .archive-remaining .archive-item-info {
   padding: 0 !important;
 }
+.archive-remaining .archive-item-info .date {
+  color: #FF00D2;
+}
+.archive-remaining .archive-item-info .category-container {
+  color: #FF00D2;
+}
+.archive-remaining .archive-item-info .category-container a {
+  color: #FF00D2;
+}
 .mc4wp-response {
   margin: 1rem 0;
   text-align: center;
@@ -748,8 +762,11 @@ a:hover {
 .category-item h2 {
   font-size: 1.5rem !important;
 }
+.category-item .archive-item-meta {
+  color: #FF00D2;
+}
 .category-item .archive-item-meta a {
-  color: #210031 !important;
+  color: #FF00D2 !important;
   font-weight: 600;
 }
 .category-item .excerpt-link {

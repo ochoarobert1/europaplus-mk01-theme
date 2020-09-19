@@ -53,7 +53,7 @@
                     <div class="container-fluid">
                         <div class="row align-items-center justify-content-between">
                             <div class="header-logo col-xl-5 col-lg-2 col-md-3 col-sm-6 col-6 d-xl-flex d-lg-flex d-md-none d-sm-none d-none">
-                                <a class="navbar-brand" href="https://beta.europamas.com/browse" title="<?php echo get_bloginfo('name'); ?>">
+                                <a class="navbar-brand" href="https://europamas.com/browse" title="<?php echo get_bloginfo('name'); ?>">
                                     <?php ?> <?php $custom_logo_id = get_theme_mod( 'custom_logo' ); ?>
                                     <?php $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
                                     <?php if (!empty($image)) { ?>
@@ -103,7 +103,7 @@
                             </div>
                             <div class="header-navbar-mobile col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xl-none d-lg-none d-md-block d-sm-block d-block">
                                 <nav class="navbar navbar-expand-md" role="navigation">
-                                    <a class="navbar-brand" href="https://beta.europamas.com/browse" title="<?php echo get_bloginfo('name'); ?>">
+                                    <a class="navbar-brand" href="https://europamas.com/browse" title="<?php echo get_bloginfo('name'); ?>">
                                         <?php ?> <?php $custom_logo_id = get_theme_mod( 'custom_logo' ); ?>
                                         <?php $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
                                         <?php if (!empty($image)) { ?>

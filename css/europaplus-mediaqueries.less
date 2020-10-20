@@ -74,11 +74,29 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
     .single-main-help-container {
         padding-top: 1rem;
     }
+
+    .single-main-helper h2 {
+        font-size: 1.5rem;
+    }
+
+    .single-main-help-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .single-main-help-content {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
 }
 
 @media (max-width: 800px) {}
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .post-content img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
 
 /* --------------------------------------------------------------
 MEDIAQUERIES XS - LAYOUTS LESS THAN 768px
@@ -114,6 +132,27 @@ MEDIAQUERIES XS - LAYOUTS LESS THAN 768px
         overflow-x: hidden;
         padding: 0;
         margin-bottom: 2rem;
+    }
+
+    .blog-container .archive-item .archive-item-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .blog-container .archive-item .archive-item-info {
+        padding: 1rem 1rem;
+    }
+
+    .footer-social {
+        margin-left: 0;
+    }
+
+    .main-post-title h1 {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+    }
+
+    .post-content h2 {
+        font-size: 1rem;
     }
 }
 

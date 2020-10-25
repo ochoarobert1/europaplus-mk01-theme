@@ -37,7 +37,6 @@
                                 <div class="w-100"></div>
                                 <div class="footer-copy  col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" class="img-fluid" />
-                                    <h5>&copy; <?php _e('2020 Europa Más Inc.', 'europaplus'); ?></h5>
                                 </div>
                             </div>
                         </div>

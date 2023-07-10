@@ -2,9 +2,6 @@
 <?php $defaultatts = array('class' => 'img-fluid', 'itemprop' => 'image'); ?>
 <main class="container" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
     <div class="row">
-        <div class="page-title col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h1><?php echo sprintf( __( '%s Search Results for ', 'europaplus' ), $wp_query->found_posts ); echo esc_attr(get_search_query()); ?></h1>
-        </div>
         <div class="page-container blog-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="container p-0">
                 <div class="row">
@@ -12,6 +9,9 @@
                     <section class="blog-posts-container col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                         <div class="container">
                             <div class="row">
+                                <div class="title-cat-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <h1><?php echo sprintf( __( '%s Search Results for ', 'europaplus' ), $wp_query->found_posts ); echo esc_attr(get_search_query()); ?></h1>
+                                </div>
                                 <?php while (have_posts()) : the_post(); ?>
                                 <article id="post-<?php the_ID(); ?>" class="archive-item archive-remaining col-12 <?php echo join(' ', get_post_class()); ?>" role="article">
                                     <div class="container p-0">
@@ -44,8 +44,6 @@
                                 <?php endwhile; ?>
                             </div>
                         </div>
-
-                        <?php endif; ?>
                         <?php wp_reset_query(); ?>
                         <div class="pagination col-12">
                             <?php if(function_exists('wp_paginate')) { wp_paginate(); } else { posts_nav_link(); wp_link_pages(); } ?>
@@ -55,7 +53,7 @@
                         <?php get_sidebar(); ?>
                     </aside>
                     <?php else: ?>
-                    <section>
+                    <section class="blog-posts-container col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                         <h2><?php _e('Disculpe, su busqueda no arrojo ningun resultado', 'europaplus'); ?></h2>
                         <h3><?php _e('Dirígete nuevamente al', 'europaplus'); ?> <a href="<?php echo home_url('/'); ?>" title="<?php _e('Volver al Inicio', 'europaplus'); ?>"><?php _e('inicio', 'europaplus'); ?></a>.</h3>
                     </section>

@@ -1,5 +1,4 @@
-
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function($) {
     "use strict";
 
     jQuery('.mobile-btn').on('click', function(e) {
@@ -45,6 +44,37 @@ jQuery(document).ready(function ($) {
 
     jQuery(".flexselect").on('change', function() {
         location.href = jQuery(this).val();
+    });
+
+    var mySwiper = new Swiper('.topshows-swiper-container', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoplay: {
+            delay: 8000,
+            disableOnInteraction: false,
+        }
+    });
+
+    var mySwiper2 = new Swiper('.maxnews-swiper-container', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 0,
+        autoplay: {
+            delay: 8000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            600: {
+                slidesPerView: 1
+            },
+            991: {
+                slidesPerView: 2
+            }
+        }
     });
 
 }); /* end of as page load scripts */

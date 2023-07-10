@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROYECTO\n"
-"POT-Creation-Date: 2020-08-05 18:20-0400\n"
-"PO-Revision-Date: 2020-08-05 18:21-0400\n"
+"POT-Creation-Date: 2020-12-02 21:24-0400\n"
+"PO-Revision-Date: 2020-12-02 21:24-0400\n"
 "Last-Translator: Robert Ochoa <ochoa.robert1@gmail.com>\n"
 "Language-Team: Robert Ochoa <contacto@robertochoa.com.ve>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -19,52 +19,62 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: js\n"
 
-#: 404.php:12
-msgid "Error 404"
-msgstr "Error 404"
+#: 404.php:5
+msgid "¿Buscas más?"
+msgstr "Looking for more?"
 
-#: 404.php:14
-msgid "No podemos encontrar la página que buscas. Dirígete nuevamente al"
+#: 404.php:6
+msgid "Aqui hay más"
+msgstr "Here's more"
+
+#: 404.php:8
+msgid "más entretenimiento, más flexibilidad, más series y programas europeos"
 msgstr ""
-"Sorry, but we can't seem to find the page you are looking for. Go back to"
+"more entertainment, more flexibility, more European series and programs"
 
-#: 404.php:14 archive.php:51 author.php:52 category.php:53 index.php:58
-#: search.php:53 tag.php:53
-msgid "Volver al Inicio"
-msgstr "Back to Home"
+#: 404.php:11
+msgid "404 - Página No Encontrada"
+msgstr "404 - Page Not Found"
 
-#: 404.php:14 archive.php:51 author.php:52 category.php:53 index.php:58
-#: search.php:53 tag.php:53
-msgid "inicio"
-msgstr "home"
+#: 404.php:12
+msgid "¡Lo sentimos! La página que estás buscando no existe."
+msgstr "Sorry! The page you're looking for doesn't exist."
 
-#: archive-help-articles.php:7
-#, fuzzy
-#| msgid "Help &amp; Assistance"
-msgid "Ayuda &amp; Asistencia"
+#: 404.php:13
+msgid ""
+"Tal vez escribiste mal la dirección o la página no está disponible por el "
+"momento."
+msgstr ""
+"Maybe you mis-wrote the address or the page isn't available at the moment."
+
+#: archive-help-articles.php:7 single-help-articles.php:10
+#: taxonomy-help-articles.php:5 templates/page-helparticles.php:16
+msgid "Ayuda y Asistencia"
 msgstr "Help &amp; Assistance"
 
-#: archive.php:32 category.php:34 search.php:34 tag.php:34
-msgid "Publicado por:"
-msgstr "Published by:"
-
-#: archive.php:35 category.php:37 search.php:37 tag.php:37
-msgid "Leer Más"
-msgstr "Read More"
-
-#: archive.php:50 author.php:51 category.php:52 index.php:57 search.php:52
-#: tag.php:52
+#: archive.php:62 author.php:61 category.php:61 index.php:161 search.php:57
+#: tag.php:61
 msgid "Disculpe, su busqueda no arrojo ningun resultado"
 msgstr "Sorry, your search doesn't threw any result"
 
-#: archive.php:51 author.php:52 category.php:53 index.php:58 search.php:53
-#: tag.php:53
+#: archive.php:63 author.php:62 category.php:62 index.php:162 search.php:58
+#: tag.php:62
 msgid "Dirígete nuevamente al"
 msgstr "Go back to"
 
-#: footer.php:40
-msgid "2020 Europa Más Inc."
-msgstr "2020 Europe Plus Inc."
+#: archive.php:63 author.php:62 category.php:62 index.php:162 search.php:58
+#: tag.php:62
+msgid "Volver al Inicio"
+msgstr "Back to Home"
+
+#: archive.php:63 author.php:62 category.php:62 index.php:162 search.php:58
+#: tag.php:62
+msgid "inicio"
+msgstr "home"
+
+#: author.php:41 category.php:41 tag.php:41
+msgid "Read More"
+msgstr "Read More"
 
 #: functions.php:110
 msgid "Menu Header - Principal"
@@ -91,11 +101,11 @@ msgstr "Footer Section %d"
 msgid "Footer Section"
 msgstr "Footer Section"
 
-#: functions.php:156
+#: functions.php:158
 msgid "Gracias por crear con "
 msgstr "Thank you for creating with "
 
-#: functions.php:158
+#: functions.php:160
 msgid "Tema desarrollado por "
 msgstr "Theme Developed By "
 
@@ -474,6 +484,79 @@ msgstr "Installing Plugin %1$s (%2$d/%3$d)"
 msgid "Add a menu"
 msgstr "Add a menu"
 
+#: includes/wp_custom_functions.php:68
+msgid ""
+"Este widget custom mostrará un formulario de Mailchimp personalizado, deberá "
+"agregarse la lista de Mailchimp al cual el user ingresará al momento de "
+"registrarse"
+msgstr ""
+"This custom widget will display a custom Mailchimp form, the Mailchimp list "
+"to which the user will enter when registering must be added"
+
+#: includes/wp_custom_functions.php:96
+msgid "Email"
+msgstr "Email"
+
+#: includes/wp_custom_functions.php:97
+msgid "Enter your email address here"
+msgstr "Enter your email address here"
+
+#: includes/wp_custom_functions.php:99
+msgid "Name"
+msgstr "Name"
+
+#: includes/wp_custom_functions.php:100
+msgid "Enter your name here"
+msgstr "Enter your name here"
+
+#: includes/wp_custom_functions.php:102
+msgid "Language"
+msgstr "Language"
+
+#: includes/wp_custom_functions.php:103
+msgid "Enter your language here"
+msgstr "Enter your language here"
+
+#: includes/wp_custom_functions.php:109
+msgid "Sign up"
+msgstr "Sign up"
+
+#: includes/wp_custom_functions.php:127
+msgid "Título:"
+msgstr "Title:"
+
+#: includes/wp_custom_functions.php:130
+msgid "Título del Widget"
+msgstr "Widget Title"
+
+#: includes/wp_custom_functions.php:134
+msgid "Subtitilo:"
+msgstr "Subtitle:"
+
+#: includes/wp_custom_functions.php:137
+msgid "Agregue aqui el subtitulo del widget"
+msgstr "Add here the subtitle of the widget"
+
+#: includes/wp_custom_functions.php:141
+msgid "API Key de Mailchimp:"
+msgstr "Mailchimp API Key:"
+
+#: includes/wp_custom_functions.php:144
+msgid ""
+"Aquí podrá agregar el APIKey de Mailchimp a donde debe llegar el correo del "
+"suscriptor"
+msgstr "Here you can add the Mailchimp APIKey where subscriber mail should go"
+
+#: includes/wp_custom_functions.php:148
+msgid "Lista de Mailchimp:"
+msgstr "Mailchimp List:"
+
+#: includes/wp_custom_functions.php:151
+msgid ""
+"Aquí podrá agregar el ListID de Mailchimp a donde debe llegar el correo del "
+"suscriptor"
+msgstr "Here you can add the Mailchimp ListID where subscriber mail should go"
+
 #: includes/wp_custom_metabox.php:8
 #, fuzzy
 msgid "Información Extra"
@@ -772,7 +855,7 @@ msgstr "Youtube channel"
 #: post-formats/format-chat.php:11 post-formats/format-gallery.php:11
 #: post-formats/format-image.php:11 post-formats/format-link.php:11
 #: post-formats/format-quote.php:11 post-formats/format-status.php:11
-#: post-formats/format-video.php:11 post-formats/format.php:12
+#: post-formats/format-video.php:11 post-formats/format.php:19 single.php:27
 msgid "Tags: "
 msgstr "Tags: "
 
@@ -780,11 +863,11 @@ msgstr "Tags: "
 #: post-formats/format-chat.php:16 post-formats/format-gallery.php:16
 #: post-formats/format-image.php:16 post-formats/format-link.php:16
 #: post-formats/format-quote.php:16 post-formats/format-status.php:16
-#: post-formats/format-video.php:16 post-formats/format.php:7
+#: post-formats/format-video.php:16 post-formats/format.php:14 single.php:22
 msgid "Pages:"
 msgstr "Pages:"
 
-#: search.php:8
+#: search.php:13
 #, php-format
 msgid "%s Search Results for "
 msgstr "%s Search Results for "
@@ -793,13 +876,29 @@ msgstr "%s Search Results for "
 msgid "Buscar por Términos:"
 msgstr "Search Terms:"
 
-#: searchform.php:6
-msgid "Buscar"
-msgstr "Search"
+#~ msgid "Error 404"
+#~ msgstr "Error 404"
 
-#: single-help-articles.php:10 taxonomy-help-articles.php:5
-msgid "Ayuda y Asistencia"
-msgstr "Help &amp; Assistance"
+#~ msgid "No podemos encontrar la página que buscas. Dirígete nuevamente al"
+#~ msgstr ""
+#~ "Sorry, but we can't seem to find the page you are looking for. Go back to"
+
+#, fuzzy
+#~| msgid "Help &amp; Assistance"
+#~ msgid "Ayuda &amp; Asistencia"
+#~ msgstr "Help &amp; Assistance"
+
+#~ msgid "Publicado por:"
+#~ msgstr "Published by:"
+
+#~ msgid "Leer Más"
+#~ msgstr "Read More"
+
+#~ msgid "2020 Europa Más Inc."
+#~ msgstr "2020 Europe Plus Inc."
+
+#~ msgid "Buscar"
+#~ msgstr "Search"
 
 #~ msgid "Help & Assistance"
 #~ msgstr "Help & Assistance"
@@ -824,9 +923,6 @@ msgstr "Help &amp; Assistance"
 
 #~ msgid "How can we assist you?"
 #~ msgstr "How can we assist you?"
-
-#~ msgid "Enter search terms here"
-#~ msgstr "Enter search terms here"
 
 #~ msgid "Archivo de"
 #~ msgstr "Archive from"

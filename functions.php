@@ -191,6 +191,9 @@ if ( function_exists('add_image_size') ) {
     add_image_size('avatar', 100, 100, true);
     add_image_size('blog_img', 276, 217, true);
     add_image_size('single_img', 636, 297, true );
+    add_image_size('topshows', 685, 350, true );
+    add_image_size('maxnews', 350, 180, true );
+    add_image_size('remaining', 250, 130, true );
 }
 
 /* --------------------------------------------------------------

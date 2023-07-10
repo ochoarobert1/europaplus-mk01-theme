@@ -981,3 +981,74 @@ a {
         font-weight: 600;
     }
 }
+
+.container-remaining {
+    max-height: 430px;
+    overflow: auto;
+    box-sizing: content-box;
+    padding-right: 2rem;
+}
+
+.header-empty {
+    text-align: center;
+}
+
+.not-found-page {
+    text-align: center;
+    padding: 3rem 0;
+    color: white;
+
+    & h1 {
+        font-size: 4.5rem;
+        font-weight: 800;
+    }
+
+
+    & .btn-404 {
+        border: 3px solid @pink;
+        padding: 0.9rem 2.3rem;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        color: white;
+        margin: 1.5rem 0;
+
+
+        &:hover {
+            border-color: @white;
+            background: @pink;
+            color: @white;
+        }
+    }
+
+    & .text {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+    }
+
+    & .notification-text {
+        margin-bottom: 3rem;
+
+        & .text {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.4rem;
+        }
+    }
+
+    & .social-networks {
+        font-size: 2.3rem;
+        letter-spacing: 0.2rem;
+
+        & a {
+            color: @gray6;
+
+            &:hover {
+                color: @pink;
+            }
+        }
+    }
+
+
+}

@@ -64,6 +64,10 @@ function europaplus_load_css() {
             wp_enqueue_style('aos-css');
         }
 
+        /*- SWIPER JS -*/
+        wp_register_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', false, '6.1.2', 'all');
+        wp_enqueue_style('swiper-css');
+
         /*- GOOGLE FONTS -*/
         wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:100:300,400,600:700:900', false, $version_remove, 'all');
         wp_enqueue_style('google-fonts');

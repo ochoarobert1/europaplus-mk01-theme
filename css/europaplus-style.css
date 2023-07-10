@@ -773,3 +773,58 @@ a:hover {
   color: #ff00d2;
   font-weight: 600;
 }
+.container-remaining {
+  max-height: 430px;
+  overflow: auto;
+  box-sizing: content-box;
+  padding-right: 2rem;
+}
+.header-empty {
+  text-align: center;
+}
+.not-found-page {
+  text-align: center;
+  padding: 3rem 0;
+  color: white;
+}
+.not-found-page h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+}
+.not-found-page .btn-404 {
+  border: 3px solid #FF00D7;
+  padding: 0.9rem 2.3rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: white;
+  margin: 1.5rem 0;
+}
+.not-found-page .btn-404:hover {
+  border-color: #ffffff;
+  background: #FF00D7;
+  color: #ffffff;
+}
+.not-found-page .text {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+.not-found-page .notification-text {
+  margin-bottom: 3rem;
+}
+.not-found-page .notification-text .text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+.not-found-page .social-networks {
+  font-size: 2.3rem;
+  letter-spacing: 0.2rem;
+}
+.not-found-page .social-networks a {
+  color: #666666;
+}
+.not-found-page .social-networks a:hover {
+  color: #FF00D7;
+}

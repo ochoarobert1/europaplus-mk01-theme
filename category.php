@@ -16,7 +16,7 @@
                                 <?php while (have_posts()) : the_post(); ?>
                                 <article id="post-<?php the_ID(); ?>" class="archive-item archive-remaining category-item col-12 <?php echo join(' ', get_post_class()); ?>" role="article">
                                     <div class="container p-0">
-                                        <div class="row align-items-center">
+                                        <div class="row">
                                             <picture class="archive-item-picture col-6">
                                                 <?php if ( has_post_thumbnail()) : ?>
                                                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">

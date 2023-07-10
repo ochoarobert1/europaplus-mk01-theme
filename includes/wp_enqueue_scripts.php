@@ -128,6 +128,11 @@ function europaplus_load_js() {
 
         }
 
+        /*- SWIPER JS -*/
+        wp_register_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', [], '6.1.2', true);
+        wp_enqueue_script('swiper-js');
+
+        /*- AUTOCOMPLETE -*/
         wp_register_script('liquidmetal-js', get_template_directory_uri() . '/js/liquidmetal.js', array('jquery'), $version_remove, true);
         wp_enqueue_script('liquidmetal-js');
 

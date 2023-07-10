@@ -1,6 +1,8 @@
-![alt tag](images/repo-logo.jpg)
+![alt tag](images/repo-logo.png)
 
 # Europa+ Wordpress Custom Theme #
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)  [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
 * Version: 1.0.0
 * Design: [Robert Ochoa](http://www.robertochoa.com.ve/)
